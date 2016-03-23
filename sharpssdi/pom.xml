@@ -21,7 +21,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  
+  <build>
   <plugins>
    <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -32,4 +32,5 @@
             </configuration>
         </plugin>
   </plugins>
+  </build>
 </project>
