@@ -23,14 +23,31 @@
   </dependencies>
   <build>
   <plugins>
-   <plugin>
+  <plugin>
+            <groupId>com.lazerycode.jmeter</groupId>
+            <artifactId>jmeter-maven-plugin</artifactId>
+            <version>1.10.1</version>
+            <executions>
+               <execution>
+                  <id>jmeter-tests</id>
+                  <phase>verify</phase>
+                  <goals>
+                     <goal>jmeter</goal>
+                  </goals>
+                  <configuration>
+                     <testResultsTimestamp>false</testResultsTimestamp>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+   <!-- <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.1</version>
             <configuration>
                 <fork>true</fork>
                 <executable>C:\Program Files\Java\jdk1.7.0_45\bin\javac.exe</executable>
             </configuration>
-        </plugin>
+        </plugin> -->
   </plugins>
   </build>
 </project>
