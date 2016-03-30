@@ -1912,7 +1912,7 @@
             <stringProp name="parameters"></stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="script">
-String temp = vars.get(&quot;FileDirec&quot;) + &quot;testfiles\\&quot; + vars.get(&quot;FileName&quot;); 
+String temp = vars.get(&quot;FileDirec&quot;) + &quot;testfiles&quot; + vars.get(&quot;FileName&quot;); 
 vars.put(&quot;CompleteFilePath&quot;,temp ); </stringProp>
           </BeanShellPreProcessor>
           <hashTree/>
@@ -2756,13 +2756,13 @@ vars.put(&quot;CompleteFilePath&quot;,temp ); </stringProp>
             </elementProp>
             <elementProp name="FileName" elementType="Argument">
               <stringProp name="Argument.name">FileName</stringProp>
-              <stringProp name="Argument.value">Penguins.jpg</stringProp>
+              <stringProp name="Argument.value">${__BeanShell(File.separator,)}cpojmeter.jpg</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
               <stringProp name="Argument.desc">File to Upload</stringProp>
             </elementProp>
             <elementProp name="FileDirec" elementType="Argument">
               <stringProp name="Argument.name">FileDirec</stringProp>
-              <stringProp name="Argument.value">D:\folder\</stringProp>
+              <stringProp name="Argument.value">${__BeanShell(import org.apache.jmeter.services.FileServer; FileServer.getFileServer().getBaseDir();)}${__BeanShell(File.separator,)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
               <stringProp name="Argument.desc">File Directory</stringProp>
             </elementProp>
